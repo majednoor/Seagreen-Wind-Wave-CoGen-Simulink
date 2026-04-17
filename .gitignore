@@ -1,0 +1,15 @@
+# MATLAB files to ignore
+*.asv
+*.autosave
+*.slxc
+*.mex*
+*.mexa64
+*.mexw64
+*.mexmaci64
+*.log
+*.tmp
+*.bak
+*.mdl.r*
+slprj/
+codegen/
+*.fig
