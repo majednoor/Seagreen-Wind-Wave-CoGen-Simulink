@@ -1,25 +1,38 @@
-# Seagreen-Wind-Wave-CoGen-Simulink
-Offshore wind–wave co-generation model (Seagreen 1) developed in MATLAB/Simulink. Includes aggregated WEC subsystem, real wind (ERA5) and wave (CMEMS) data integration, and system-level power analysis.
+# Seagreen Wind–Wave Co-Generation Model (Simulink)
 
-This repository contains the MATLAB/Simulink model developed for my final year project at the University of Manchester.
+## Overview
+This project presents a system-level MATLAB/Simulink model of a co-generation offshore wind–wave energy system based on the Seagreen 1 wind farm.
 
-## Project Overview
-The project investigates the integration of wave energy converters (WECs) within an offshore wind farm (Seagreen 1) to enhance total exported active power.
+The model integrates:
+- A DFIG-based offshore wind farm (1.14 GW)
+- An aggregated wave energy converter (WEC) subsystem
+- Real environmental data:
+  - Wind: ERA5 (Copernicus Climate Data Store)
+  - Wave: CMEMS (Copernicus Marine Service)
 
-## Model Features
-- DFIG-based offshore wind farm model (1.14 GW)
-- Aggregated wave energy subsystem
-- Real wind data (ERA5)
-- Real wave data (CMEMS)
-- System-level power injection at 66 kV bus
+## Objective
+To evaluate how wave energy integration enhances total exported active power and improves utilisation of existing offshore transmission infrastructure.
+
+## Model Description
+- Wind farm connected to 220 kV export system
+- Wave energy modelled as aggregated active power injection at the offshore bus
+- Two WEC configurations analysed:
+  - 400 × 300 kW devices
+  - 250 × 1 MW devices
+
+## Data Sources
+- Wind data: ERA5 reanalysis
+- Wave data: CMEMS North-West European Shelf wave reanalysis
+
+## How to Run
+1. Open MATLAB
+2. Open the `.slx` file
+3. Run the simulation
+4. Observe outputs in scopes:
+   - Active power (P)
+   - Reactive power (Q)
+   - DC link voltage
+   - Rotor speed
 
 ## Notes
-This repository contains the final working version of the model used for simulation.  
-The model is intended for system-level analysis rather than detailed device-level modelling.
-
-## Requirements
-- MATLAB (R2023 or later recommended)
-- Simscape Electrical
-
-## Author
-Majid Ahmed
+This model is intended for system-level analysis and does not include detailed hydrodynamic modelling of individual WEC devices.
